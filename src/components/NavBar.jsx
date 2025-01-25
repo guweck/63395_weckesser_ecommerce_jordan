@@ -33,7 +33,7 @@ const styles = {
     color: 'red',
   },
   logo: {
-    height: '50px', 
+    height: '100px', 
     marginRight: '1rem'
   },
   brand: {

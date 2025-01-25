@@ -5,7 +5,7 @@ export const productsData = [
       category: 'zapatillas',
       price: 150,
       stock: 10,
-      image: 'https://via.placeholder.com/300x200.png?text=Zapatillas+Air+Jordan+1',
+      image: "../../public/airjordan1.jpg",
       description: 'Zapatillas icónicas de la marca Jordan.'
     },
     {
@@ -14,7 +14,7 @@ export const productsData = [
       category: 'zapatillas',
       price: 180,
       stock: 8,
-      image: 'https://via.placeholder.com/300x200.png?text=Zapatillas+Jordan+Max+Aura',
+      image: "../../public/jordanmaxaura.jpg",
       description: 'Comodidad y estilo para el deporte.'
     },
     {
@@ -23,7 +23,7 @@ export const productsData = [
       category: 'remeras',
       price: 40,
       stock: 25,
-      image: 'https://via.placeholder.com/300x200.png?text=Remera+Jordan+Jumpman',
+      image: "../../public/joprdanjumpman.jpg",
       description: 'Remera deportiva con logo Jordan.'
     },
     {
@@ -32,7 +32,7 @@ export const productsData = [
       category: 'remeras',
       price: 45,
       stock: 30,
-      image: 'https://via.placeholder.com/300x200.png?text=Remera+Jordan+Dri-FIT',
+      image: "../../public/jordandrifit.jpg",
       description: 'Tecnología Dri-FIT para un mejor rendimiento.'
     },
     {
@@ -41,7 +41,7 @@ export const productsData = [
       category: 'pantalones',
       price: 60,
       stock: 15,
-      image: 'https://via.placeholder.com/300x200.png?text=Pantalon+Jordan+Sport',
+      image: "../../public/jordansport.jpg",
       description: 'Pantalón cómodo y resistente para entrenar.'
     },
     {
@@ -50,7 +50,7 @@ export const productsData = [
       category: 'pantalones',
       price: 65,
       stock: 20,
-      image: 'https://via.placeholder.com/300x200.png?text=Pantalon+Jordan+Essentials',
+      image: "../../public/jordanessentials.jpg",
       description: 'Diseño minimalista con máximo confort.'
     }
   ]

@@ -44,7 +44,7 @@ const styles = {
     flex: '1'
   },
   image: {
-    width: '100%',
+    width: '600px',
     height: 'auto'
   },
   price: {

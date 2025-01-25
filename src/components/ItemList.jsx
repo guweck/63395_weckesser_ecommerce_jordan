@@ -32,7 +32,7 @@ const styles = {
     textAlign: 'center'
   },
   image: {
-    width: '100%',
+    width: '300px',
     height: 'auto'
   },
   button: {
