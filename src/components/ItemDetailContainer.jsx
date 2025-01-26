@@ -1,28 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
-import { productsData } from '../data/products'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../src/firebaseconfig'
 
 const ItemDetailContainer = () => {
   const { id } = useParams()
   const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Simulamos una llamada asíncrona a la "base de datos"
-    const getProductById = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productsData.find(item => item.id === parseInt(id)))
-      }, 500)
-    })
-
-    getProductById.then((res) => {
-      setProduct(res)
-    })
+    const docRef = doc(db, 'products', id)
+    getDoc(docRef)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          setProduct({ id: snapshot.id, ...snapshot.data() })
+        }
+      })
+      .finally(() => setLoading(false))
   }, [id])
+
+  if (loading) {
+    return <p>Cargando producto...</p>
+  }
+
+  if (!product) {
+    return <p>El producto no existe.</p>
+  }
 
   return (
     <div style={styles.container}>
-      {product ? <ItemDetail product={product} /> : <p>Cargando producto...</p>}
+      <ItemDetail product={product} />
     </div>
   )
 }
@@ -34,3 +42,4 @@ const styles = {
     padding: '1rem'
   }
 }
+

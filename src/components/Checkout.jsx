@@ -2,15 +2,47 @@ import React from 'react'
 import { useCart } from '../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 
+// Importamos Firestore
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import { db } from '../../src/firebaseconfig'
+
 const Checkout = () => {
   const { cart, totalPrice, clearCart } = useCart()
   const navigate = useNavigate()
 
-  const handleFinishPurchase = () => {
-    // Aquí podrías realizar la lógica de compra (enviar datos a un backend, etc.)
-    // Simularemos el success redirigiendo al Brief
-    clearCart()
-    navigate('/brief')
+  const handleFinishPurchase = async () => {
+    // Datos de la orden
+    const order = {
+      items: cart.map(item => ({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        quantity: item.quantity
+      })),
+      total: totalPrice,
+      date: serverTimestamp(), // marca de tiempo del servidor
+      buyer: {
+        name: 'Nombre del Cliente',
+        email: 'email@cliente.com',
+        phone: '123456789'
+      }
+    }
+
+    try {
+      // Guardamos la orden en la colección "orders"
+      const ordersRef = collection(db, 'orders')
+      const docRef = await addDoc(ordersRef, order)
+
+      console.log('Orden creada con ID:', docRef.id)
+
+      // Limpiamos el carrito
+      clearCart()
+
+      // Redirigimos a /brief (puedes pasar el ID por state o query si deseas mostrarlo)
+      navigate('/brief')
+    } catch (error) {
+      console.error('Error al crear la orden:', error)
+    }
   }
 
   if (cart.length === 0) {
@@ -67,3 +99,4 @@ const styles = {
     cursor: 'pointer'
   }
 }
+
