@@ -4,7 +4,7 @@ import ItemList from './ItemList'
 
 // Importar Firestore y métodos para consultas
 import { collection, getDocs, query, where } from 'firebase/firestore'
-import { db } from '../../src/firebaseconfig' // <-- nuestra instancia de Firestore
+import { db } from '../../src/firebaseconfig' 
 
 const ItemListContainer = ({ greeting }) => {
   const { catId } = useParams()
@@ -24,8 +24,8 @@ const ItemListContainer = ({ greeting }) => {
       .then((snapshot) => {
         const data = snapshot.docs.map((doc) => {
           return {
-            id: doc.id,          // ID de Firestore
-            ...doc.data()        // resto de campos (title, price, category, etc.)
+            id: doc.id,     
+            ...doc.data()      
           }
         })
         setItems(data)

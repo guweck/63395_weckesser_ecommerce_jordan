@@ -8,7 +8,6 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
 
   const addItem = (item, quantity) => {
-    // Si el producto ya existe en el carrito, actualizar la cantidad
     const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id)
     if (existingItemIndex >= 0) {
       const updatedCart = [...cart]
@@ -19,6 +18,7 @@ export const CartProvider = ({ children }) => {
     }
   }
 
+  // Botón de "papelera" elimina 1 item completo
   const removeItem = (itemId) => {
     setCart(cart.filter(product => product.id !== itemId))
   }
@@ -27,20 +27,46 @@ export const CartProvider = ({ children }) => {
     setCart([])
   }
 
-  const totalItems = cart.reduce((acc, product) => acc + product.quantity, 0)
+  const incrementItem = (itemId) => {
+    const updatedCart = cart.map(item => {
+      if (item.id === itemId) {
+        return { ...item, quantity: item.quantity + 1 }
+      }
+      return item
+    })
+    setCart(updatedCart)
+  }
 
+  const decrementItem = (itemId) => {
+    const updatedCart = cart
+      .map(item => {
+        if (item.id === itemId && item.quantity > 1) {
+          return { ...item, quantity: item.quantity - 1 }
+        }
+        return item
+      })
+      .filter(item => item.quantity !== 0)
+    setCart(updatedCart)
+  }
+
+  const totalItems = cart.reduce((acc, product) => acc + product.quantity, 0)
   const totalPrice = cart.reduce((acc, product) => acc + product.price * product.quantity, 0)
 
   return (
-    <CartContext.Provider value={{
-      cart,
-      addItem,
-      removeItem,
-      clearCart,
-      totalItems,
-      totalPrice
-    }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addItem,
+        removeItem,
+        clearCart,
+        incrementItem,
+        decrementItem,
+        totalItems,
+        totalPrice
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
 }
+

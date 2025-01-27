@@ -1,3 +1,5 @@
+// Esta información no se utiliza más desde la implementación de FIREBASE: //
+// En la raíz del proyecto creé el archivo "firebaseconfig.js" para inicializar FIREBASE //
 export const productsData = [
     {
       id: 1,
