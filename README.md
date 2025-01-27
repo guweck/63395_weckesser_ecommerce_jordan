@@ -23,7 +23,7 @@ El checkout posee un formulario para ingresar los datos del clientes, los cuales
 <p align="left">
 Se devuelve al cliente un id de su orden de compra a manera de número de seguimiento</p>
 <p align="left">
-Se incluye el MODO DE PRODUCCIÓN para facilitar la vista final de la página</p>
+Se incluye el MODO DE PRODUCCIÓN para facilitar la vista final de la página, mediante un deploy en VERCEL. Por favor seguir el enlace en el "About" del repositorio para visualizar la página desde vercel.com</p>
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/gustavo weckesser" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="gustavo weckesser" height="30" width="40" /></a>
