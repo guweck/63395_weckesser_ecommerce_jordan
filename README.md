@@ -13,7 +13,7 @@
 
 - 📫 How to reach me **guweck@gmail.com**
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Descripción del proyecto:<h3>
 <p align="left">
 El presente es el proyecto final del curso Coderhouse-REACT del alumno Gustavo Weckesser. comisión 63395: Se trata de un E-Commerce programado en REACT-Vite y utilizando funcionalidad de FIREBASE dentro del mismo.</p>
 <p align="left">
@@ -24,6 +24,7 @@ El checkout posee un formulario para ingresar los datos del clientes, los cuales
 Se devuelve al cliente un id de su orden de compra a manera de número de seguimiento</p>
 <p align="left">
 Se incluye el MODO DE PRODUCCIÓN para facilitar la vista final de la página</p>
+<h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/gustavo weckesser" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="gustavo weckesser" height="30" width="40" /></a>
 <a href="https://fb.com/gweckesser" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="gweckesser" height="30" width="40" /></a>
