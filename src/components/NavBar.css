@@ -1,21 +1,27 @@
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center; 
     padding: 1rem;
-    background-color: #333;
-    color: #fff;
+    background: #333;
 }
 
-.nav__brand {
-    margin: 0;
+.logoLink {
+    text-decoration: none;
 }
 
-.nav__links {
+.logo {
+    height: 150px; 
+    width: auto;
+}
+
+
+.links {
     display: flex;
     gap: 1rem;
 }
 
-.nav__link {
-    color: yellow; /* ejemplo */
+.links a {
+    color: yellow;
     text-decoration: none;
 }

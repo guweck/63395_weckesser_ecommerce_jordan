@@ -1,18 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
-import './NavBar.css' // Importamos los estilos
+import './NavBar.css' // Importa la hoja de estilos
 
 const NavBar = () => {
   return (
     <nav className="nav">
-      <h2 className="nav__brand">Jordan Sports</h2>
-      <div className="nav__links">
-        <Link to="/" className="nav__link">Inicio</Link>
-        <Link to="/category/zapatillas" className="nav__link">Zapatillas</Link>
-        <Link to="/category/remeras" className="nav__link">Remeras</Link>
-        <Link to="/category/pantalones" className="nav__link">Pantalones</Link>
+    
+      <Link to="/" className="logoLink">
+        <img src="/jordansports.png" alt="Jordan Sports Logo" className="logo" />
+      </Link>
+
+      {/* Enlaces de navegación */}
+      <div className="links">
+        <Link to="/category/zapatillas">Zapatillas</Link>
+        <Link to="/category/remeras">Remeras</Link>
+        <Link to="/category/pantalones">Pantalones</Link>
       </div>
+
       <CartWidget />
     </nav>
   )
