@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './ItemList.css' 
+import './ItemList.css' // Importa la hoja de estilos
 
 const ItemList = ({ items }) => {
   return (
@@ -20,3 +20,4 @@ const ItemList = ({ items }) => {
 }
 
 export default ItemList
+
