@@ -1,0 +1,43 @@
+.checkoutContainer {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .checkoutTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  .emptyCart {
+    text-align: center;
+  }
+  
+  .btnPrimary {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50; /* verde */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .btnSmall {
+    width: 30px;
+    height: 30px;
+    background-color: #888;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btnRemove {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  

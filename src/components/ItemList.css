@@ -1,0 +1,29 @@
+/* Contenedor principal en forma de grilla */
+.itemListGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+  /* Tarjeta individual de cada producto */
+.itemListCard {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+  /* Imagen del producto, ajustada de forma responsive */
+.itemListImage {
+    width: 500px;
+    height: auto;
+}
+
+  /* Botón/enlace para ver el detalle del producto */
+.itemListButton {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}

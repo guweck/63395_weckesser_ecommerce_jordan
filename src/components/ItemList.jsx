@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './ItemList.css' 
 
 const ItemList = ({ items }) => {
   return (
-    <div style={styles.grid}>
+    <div className="itemListGrid">
       {items.map(item => (
-        <div key={item.id} style={styles.card}>
-          <img src={item.image} alt={item.title} style={styles.image} />
+        <div key={item.id} className="itemListCard">
+          <img src={item.image} alt={item.title} className="itemListImage" />
           <h3>{item.title}</h3>
           <p>$ {item.price}</p>
-          <Link to={`/product/${item.id}`} style={styles.button}>
+          <Link to={`/product/${item.id}`} className="itemListButton">
             Ver Detalle
           </Link>
         </div>
@@ -19,28 +20,3 @@ const ItemList = ({ items }) => {
 }
 
 export default ItemList
-
-const styles = {
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '1rem'
-  },
-  card: {
-    border: '1px solid #ddd',
-    padding: '1rem',
-    textAlign: 'center'
-  },
-  image: {
-    width: '300px',
-    height: 'auto'
-  },
-  button: {
-    display: 'inline-block',
-    marginTop: '0.5rem',
-    padding: '0.5rem 1rem',
-    backgroundColor: '#333',
-    color: '#fff',
-    textDecoration: 'none'
-  }
-}

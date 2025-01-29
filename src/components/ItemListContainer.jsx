@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
+import './ItemListContainer.css'
 
 // Importar Firestore y métodos para consultas
 import { collection, getDocs, query, where } from 'firebase/firestore'
@@ -38,7 +39,7 @@ const ItemListContainer = ({ greeting }) => {
   }
 
   return (
-    <div style={styles.container}>
+    <div className='container2'>
       {greeting && <h2>{greeting}</h2>}
       <ItemList items={items} />
     </div>
@@ -47,8 +48,4 @@ const ItemListContainer = ({ greeting }) => {
 
 export default ItemListContainer
 
-const styles = {
-  container: {
-    padding: '1rem'
-  }
-}
+

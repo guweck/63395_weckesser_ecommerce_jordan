@@ -1,0 +1,30 @@
+.detailContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.imageContainer {
+    flex: 1;
+    /* IMPORTANTE: para que la imagen no se desborde al hacer zoom */
+    overflow: hidden;
+}
+
+.infoContainer {
+    flex: 1;
+}
+
+/* Imagen base: 400px, con una transición suave */
+.imageDetail {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.imageDetail:hover {
+    transform: scale(1.4); 
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ItemQuantitySelector from './ItemQuantitySelector'
 import AddItemButton from './AddItemButton'
 import Description from './Description'
+import './ItemDetail.css' 
 
 const ItemDetail = ({ product }) => {
   const [quantity, setQuantity] = useState(1)
@@ -11,13 +12,13 @@ const ItemDetail = ({ product }) => {
   }
 
   return (
-    <div style={styles.detailContainer}>
-      <div style={styles.imageContainer}>
-        <img src={product.image} alt={product.title} style={styles.image} />
+    <div className='detailContainer'>
+      <div className='imageContainer'>
+        <img src={product.image} alt={product.title} className='imageDetail' />
       </div>
-      <div style={styles.infoContainer}>
+      <div className='infoContainer' >
         <h1>{product.title}</h1>
-        <p style={styles.price}>$ {product.price}</p>
+        <p className='price'>$ {product.price}</p>
         <ItemQuantitySelector
           stock={product.stock}
           initial={1}
@@ -32,23 +33,6 @@ const ItemDetail = ({ product }) => {
 
 export default ItemDetail
 
-const styles = {
-  detailContainer: {
-    display: 'flex',
-    gap: '1rem'
-  },
-  imageContainer: {
-    flex: '1'
-  },
-  infoContainer: {
-    flex: '1'
-  },
-  image: {
-    width: '600px',
-    height: 'auto'
-  },
-  price: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold'
-  }
-}
+
+
+

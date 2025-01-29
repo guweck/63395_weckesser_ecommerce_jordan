@@ -1,0 +1,8 @@
+.additembutton {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #E53935;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

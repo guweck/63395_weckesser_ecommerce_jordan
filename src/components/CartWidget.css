@@ -1,0 +1,20 @@
+.cart {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px,;
+    background-color: red;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    color: #fff;
+    font-size: 0.8rem;
+}

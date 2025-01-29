@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from '../context/CartContext'
+import './AddItemButton.css'
 
 const AddItemButton = ({ product, quantity }) => {
   const { addItem } = useCart()
@@ -9,7 +10,7 @@ const AddItemButton = ({ product, quantity }) => {
   }
 
   return (
-    <button onClick={handleAddToCart} style={styles.button}>
+    <button onClick={handleAddToCart} className='additembutton'>
       Agregar {quantity} al carrito
     </button>
   )
@@ -17,13 +18,3 @@ const AddItemButton = ({ product, quantity }) => {
 
 export default AddItemButton
 
-const styles = {
-  button: {
-    marginTop: '1rem',
-    padding: '0.5rem 1rem',
-    backgroundColor: '#E53935',
-    color: '#fff',
-    border: 'none',
-    cursor: 'pointer'
-  }
-}
