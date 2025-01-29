@@ -1,8 +1,9 @@
 import React from 'react'
+import './description.css'
 
 const Description = ({ text }) => {
   return (
-    <div style={styles.descContainer}>
+    <div className='descContainer' >
       <h3>Descripción</h3>
       <p>{text}</p>
     </div>
@@ -11,8 +12,3 @@ const Description = ({ text }) => {
 
 export default Description
 
-const styles = {
-  descContainer: {
-    marginTop: '1rem'
-  }
-}
